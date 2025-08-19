@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :bugs, only: :index do
     collection do
-      get :tabs
+      # get :some
     end
   end
 
