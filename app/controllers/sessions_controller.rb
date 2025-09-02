@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
 
   def protected
     unless cookies.encrypted[:authenticated]
-      render status: :unauthorized
+      head :unauthorized
     end
   end
 end
