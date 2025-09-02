@@ -34,6 +34,12 @@
 
   <div class="formatted-list formatted-list--top-level">
     <%= render "navigations/item",
+      path: protected_path,
+      icon: "xmark",
+      name: "Authentication",
+      description: "Visit a protected endpoint." %>
+
+    <%= render "navigations/item",
       path: numbers_path,
       icon: "smartphone-bold",
       name: "Native screen",
