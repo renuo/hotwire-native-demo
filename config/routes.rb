@@ -47,6 +47,9 @@ Rails.application.routes.draw do
   end
   get "/resource", to: "resources#show", as: :resource
 
+  resource :session, only: %i[new create destroy]
+  get "/protected", to: "sessions#protected"
+
   direct(:docs) { "https://native.hotwired.dev" }
   direct(:book) { "https://pragprog.com/titles/jmnative/hotwire-native-for-rails-developers/" }
   direct(:bridge_components) { "https://native.hotwired.dev/overview/bridge-components" }
